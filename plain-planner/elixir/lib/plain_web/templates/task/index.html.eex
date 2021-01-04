@@ -1,0 +1,15 @@
+<h1>Listing Tasks</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <%= render "index_goals.html", goals: @goals, conn: @conn %>
+        </div>
+
+        <div class="col-md-6">
+            <%= render "index_tasks.html", tasks: @tasks, conn: @conn %>
+        </div>
+    </div>
+    <span><%= link "New Task", to: Routes.task_path(@conn, :new) %></span>
+</div>

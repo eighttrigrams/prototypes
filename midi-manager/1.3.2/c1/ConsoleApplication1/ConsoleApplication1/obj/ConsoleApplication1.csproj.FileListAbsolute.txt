@@ -1,0 +1,8 @@
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\obj\Debug\Interop.MIDIOXLib.dll
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.ResolveComReference.cache
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\bin\Debug\Interop.MIDIOXLib.dll
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+d:\HOME\DANIEL\WORKSPACE\c1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

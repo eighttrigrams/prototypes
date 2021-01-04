@@ -1,0 +1,34 @@
+using System;
+using System.Collections;
+using System.Text;
+
+namespace midiManager
+{
+	class Device
+	{
+		private MIDIOXLib.MoxScriptClass mox;
+		private int deviceID;
+
+		public Live(MIDIOXLib.MoxScriptClass m,int d)
+		{
+			mox=m;
+			deviceID=d;
+		}
+
+		public void changeChannel(int to)
+		{
+			mox.OutputMidiMsg(deviceID,191,to,127);
+			mox.OutputMidiMsg(deviceID,191,to,0);
+		}
+
+		public void fire(
+			   int channel,
+		   	   int midiCC,
+			   int valueOf)
+	 	{
+			mox.OutputMidiMsg(deviceID,channel,midiCC,valueOf);
+		}		
+
+	}
+
+}

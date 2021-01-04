@@ -1,0 +1,9 @@
+﻿bcrLinks:16
+bcrRechts:1
+bcrLive:10
+efx1:14
+efx2:15
+efx3:7
+efx4:-1
+synthOS:3
+guruOS:5

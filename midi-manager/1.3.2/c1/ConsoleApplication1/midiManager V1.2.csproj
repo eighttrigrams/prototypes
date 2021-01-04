@@ -1,0 +1,62 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E168E48-48F3-46AB-9668-F3A454864867}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>midiManager V1.2</AssemblyName>
+    <RootNamespace>midiManager_V1._2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConsoleApplication1\behringer v1.1.csproj" />
+    <Content Include="ConsoleApplication1\behringer v1.1.sln" />
+    <Content Include="ConsoleApplication1\bin\Debug\behringer v1.1.vshost.exe" />
+    <Content Include="ConsoleApplication1\bin\Debug\ConsoleApplication1.exe" />
+    <Content Include="ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb" />
+    <Content Include="ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe" />
+    <Content Include="ConsoleApplication1\bin\Debug\Interop.MIDIOXLib.dll" />
+    <Content Include="ConsoleApplication1\ConsoleApplication1.csproj" />
+    <Content Include="ConsoleApplication1\obj\ConsoleApplication1.csproj.FileListAbsolute.txt" />
+    <Content Include="ConsoleApplication1\obj\Debug\ConsoleApplication1.exe" />
+    <Content Include="ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb" />
+    <Content Include="ConsoleApplication1\obj\Debug\Interop.MIDIOXLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleApplication1\CBehringer.cs" />
+    <Compile Include="ConsoleApplication1\CGuru.cs" />
+    <Compile Include="ConsoleApplication1\Class1.cs" />
+    <Compile Include="ConsoleApplication1\Program.cs" />
+    <Compile Include="ConsoleApplication1\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConsoleApplication1\ClassDiagram1.cd" />
+    <None Include="ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.ResolveComReference.cache" />
+    <None Include="ConsoleApplication1\Properties\DataSources\MIDIOXLib._IMoxScriptEvents_SysExInputEventHandler.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConsoleApplication1\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

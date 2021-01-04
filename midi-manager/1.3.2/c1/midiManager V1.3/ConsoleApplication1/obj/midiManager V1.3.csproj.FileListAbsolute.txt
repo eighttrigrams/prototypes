@@ -1,0 +1,8 @@
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\obj\Debug\Interop.MIDIOXLib.dll
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\obj\Debug\midiManager V1.3.csproj.ResolveComReference.cache
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\HOME\DANIEL\WORKSPACE\c1\midiManager V1.3\ConsoleApplication1\bin\Debug\Interop.MIDIOXLib.dll

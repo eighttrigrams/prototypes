@@ -1,0 +1,11 @@
+colorscheme desert
+:set shiftwidth=4
+:set cindent
+:e program.cs
+:tabnew controller.cs
+:tabnew bcr2000.cs
+:tabnew page.cs
+:tabnew config.cs
+:tabnew device.cs
+:tabnew instr_controller.cs
+:tabnew guru.cs

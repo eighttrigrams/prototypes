@@ -1,0 +1,20 @@
+eventuell sollte man das mixerWidth * ID dingen überdengen, denn
+es wird davon ausgegangen, dass die virtuellen auf einem physikalischen
+laufenden mixer sich in reihe befinden, was passiert aber, wenn es
+so aussehen soll
+
+	1    1-8               1-8
+	2    17-24             9-16
+	3    9-16              17-24
+	4    25-32             25-32
+
+es sollte daher anstatt dem mixerWith einfach ein offset-tag eingeführt 
+werden, dass zu den entsprechenden channelStripAuswahlKnöpfen einfach
+die zahl hinzuaddiert
+
+
+
+
+
+
+

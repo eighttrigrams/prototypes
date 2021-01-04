@@ -1,0 +1,162 @@
+-----------------------------
+
+autor : daniel de oliveira
+am    : 2008-02-06
+change: 2008-02-06
+
+desc  : ableton live setup
+-----------------------------
+
+I. MIDI CHANNELS und MIDI-YOKE
+# ------- midi yoke anschlüsse -------------
+
+1. mackie control emulation
+
+	um diese in meinem setup in gang zu bringen, muss
+	als erster controller im live-controller menu ein
+	mackie control oder mackie control classic
+	eingetragen werden. als input sollte dann "in from
+	midi yoke 10" definiert werden. als output "out to
+	midi yoke 12". unten in der input-output liste
+	muss dann bei "in from midi yoke 10" noch
+	"fernsteuerung" aktiviert werden. das virtuelle
+	mackie display, das vor live gestartet werden
+	sollte, muss dann als eingang midi yoke 12 wählen.
+	gefüttert wird der midi yoke 10 dann vom
+	midi-manager mit den daten für die mackie control
+	emulation (start-stop-change bank etc).
+
+2. instrumente
+
+	insgesamt stehen vier synthesizer-spuren sowie
+	zwei drumcomputer spuren zur verfügung.
+	angesteuert werden diese direkt über "track ins".
+	wie das konkret aussieht ist in der folgenden
+	tabelle zusammengefasst.
+
+	input from midi yoke 1        track in      synthesizer 1
+	input from midi yoke 2        track in      synthesizer 2
+	input from midi yoke 3        track in      synthesizer 3
+	input from midi yoke 4        track in      synthesizer 4
+	input from midi yoke 6        track in      drum computer 1
+	input from midi yoke 7        track in      drum computer 2
+
+	die vier synthesizer sind realisiert als mit "rob
+	papen predator" belegte einzelne midi-spuren. hier
+	sollte als eingang der oben spezifizierte input
+	kanal gewählt werden sowie der monitoring schalter
+	auf "in" gestellt werden. angesteuert werden die
+	teile dann über die weiterleitung der controller
+	daten eines midi keyboard oder anderen
+	controllern, gesteuert durch den midi manager, der
+	die signale an ein entsprechenden yoke-port
+	weiterleitet.
+
+	das setup für die drum computer "fxpansio guru
+	1.5.12 (erweiterte midi-implementation)" ist da
+	ein wenig komplexer. hier wird auch jeweils auf
+	einem midi kanal ein guru platziert, jedoch
+	erfolgt die steuerung über weitere zu diesem zweck
+	angelegte kanäle, die ich im folgenden näher
+	beschreiben werde. 
+	Die Steuerungskanäle empfangen über die 
+	spezifizierten yoke-ports ihre daten (je nach midi-
+	kanal, unterscheidungskriterium) und leiten sie
+	dann an den hauptkanal (der mit dem guru weiter)
+	 
+
+a     in from midi yoke x  -  midi channel 11
+
+	pattern-wechsel vom midi-keyboard
+	noten vom midi keyboard, nach der guru
+	implementation so geregelt, dass die gerade
+	aktuell angezeigte engine diese empfängt (* siehe
+	hinweis). wird dieser kanal auf "rec" gearmt,
+	werden hier die noten auch aufgenommen (oder auch
+	die pattern wechsel). sollten diese später
+	abgespielt werden werden die aufgenommenen clips
+	einfach auf die in d beschriebenen spuren gezogen.
+
+b     in from midi yoke x  - midi channel  12
+
+	steuerung der guru (record - start - stop - views
+	etc )
+
+c     in from midi yoke x  - midi channel 13
+
+	browser steuerung
+
+d     in from midi yoke x  - midi channel 1
+  in from midi yoke x  - midi channel 2
+  in from midi yoke x  - midi channel 3
+  in from midi yoke x  - midi channel 4
+
+	über die einzelnen midi channels werden in guru 
+	die unterschiedlichen engines angesteuert. d.h.
+	ungabhängig von ihrer sichtbarkeit (im kontrast zu 
+	midi channel 11 - siehe a). wird also ein
+	pattern-switching arrangement (siehe a)
+	aufgenommen, das die erste engine steuern soll, so
+	wird der aufgenommene clip auf den ersten der
+	unter d aufgeführten midi channels zu verschieben
+	sein.
+
+
+3. midi-plugin steuerung
+
+	die kommunikation zwischen midi-controllern und
+	dem host wird über "midiManager" abgewickelt.
+
+	dafür werden zwei midiYokes auf fernsteuerung
+	gesetzt:
+
+	input from midi yoke 9      -  hier kommen die daten an
+	output to  midi yoke 5      -  hier gehen  die daten raus
+
+
+II. MIDI CCs
+
+
+1. channel selection
+
+	die auswahl der kanäle ist so eingestellt, das direkt, wenn ein kanal 
+	ausgewählt wird, die entsprechenden plug-ins angezeigt werden. so kann
+	per knopfdruck jeder channel-strip sofort sichtbar gemacht werden.
+	abgewickelt werden live-intern die aufrufe so:
+								  zuweisung
+	midi kanal 16 - midiCC 0  ->   aufruf midi channel 1
+	midi kanel 16 - midiCC 1  ->   aufruf midi channel 2
+	etc.
+
+2. mixer functions
+
+	jeweils ein eigener midi kanal ist jeweils für
+	eine 8-spur mixer einheit reserviert.
+
+	channel 1-8     -   midi - kanal 13
+	channel 9-16    -   midi - kanal 14
+	channel 17-24   -   midi - kanal 15
+	channel 25-32   -   midi - kanal 16
+
+	belegt sind dann jeweils 
+
+	mute
+	solo
+	volume
+	send 1
+	send 2
+	send 3
+	send 4
+
+3. channel strips
+
+III. INTEGRATION "midi-manager"
+
+mixer 
+instrumente
+
+config files
+
+IV.  GERAETE SETUP
+
+

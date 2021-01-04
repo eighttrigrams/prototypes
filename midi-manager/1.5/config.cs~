@@ -1,0 +1,250 @@
+using System;
+using System.Collections;
+using System.Text;
+using System.IO;
+
+namespace midiManager
+{
+	class ConfigControl 
+	{
+		public static void BcrConfig(BCR2000 bcr,string dateiName)
+		{
+			int inputDeviceID = 0;
+			int outputDeviceID = 0;	
+			int ID = 0;
+			int toggleChangeMixer = 0;
+			
+			int mixSectionCh = 0;
+			int insSectionCh = 0;
+			int sendsCrossRef = 0;	
+			int sendsCrossAmt = 0;
+			int sendsCrossTri = 0;
+			int toggleFullMixer = 0;	
+
+			int deviceCount = 0;
+			int pagesCount = 0;
+			int mixersCount = 0;
+			int sendsCount = 0;
+			int mixerToggleCount = 0;
+			int organisationCount = 0;
+
+			StreamReader reader = null;
+			
+			try
+			{
+				Console.Write("    reading file: ");
+				Console.WriteLine(dateiName);
+
+
+				reader = File.OpenText(dateiName);
+				int zeile = 0;
+
+				string line;
+				line = reader.ReadLine();
+				while (line!=null)
+				{
+					string[] stringList = null;
+					int[]       intList = null;
+					stringList = line.Split(':');
+
+					zeile++;
+					line = reader.ReadLine();
+					if (stringList.Length<2) continue;
+					if (stringList[0]=="#")  continue;
+
+					intList = new int[stringList.Length];
+					for (int i=1;i<stringList.Length;i++)
+						intList[i] = Convert.ToInt16(stringList[i]);
+					
+					if (stringList[0]=="mixerToggle")
+					{
+						if (stringList.Length<2)
+						throw(
+						new ParameterException(zeile));
+
+						if (  (intList[1]<0)
+							||(intList[1]>127))
+						throw(
+						new ParameterException(
+							zeile,
+							"format must be \"mixerToggle:(0..127)\""));
+
+						toggleChangeMixer=intList[1];
+						mixerToggleCount++;
+					}
+					if (stringList[0]=="organisation")
+					{
+						if (stringList.Length<3)
+							throw (new ParameterException(zeile));
+						organisationCount++;
+
+						if (  (intList[1]<1)
+							||(intList[1]>16)
+							||(intList[2]<1)
+							||(intList[2]>16))
+						throw(
+						new ParameterException(
+							zeile,
+							"format must be \"organisation:(1..16):(1..16)\""));
+
+						mixSectionCh = intList[1]-1+176;
+						insSectionCh = intList[2]-1+176;
+					}
+
+
+					if (stringList[0]=="device") 
+					{
+						if (stringList.Length<4)
+							throw(new ParameterException(zeile));
+						deviceCount++;
+						
+						if (  (intList[1]<1)
+							||(intList[1]>18)
+							||(intList[2]<1)
+							||(intList[2]>18)
+							||(intList[3]<0)
+							||(intList[3]>15))
+						throw(
+						new ParameterException(
+							zeile,
+							"format must be \"device:(1..18):(1..18):(0..15)\""));
+
+
+						inputDeviceID  = intList[1]-1;
+						outputDeviceID = intList[2];
+						ID             = intList[3];
+					}
+					if (stringList[0]=="sends")
+					{
+						if (stringList.Length<5)
+							throw(new ParameterException(zeile));
+						sendsCount++;
+						
+						if (  (intList[1]<0)
+							||(intList[1]>15)
+							||(intList[2]<0)
+							||(intList[2]>8)
+							||(intList[3]<0)
+							||(intList[3]>127)
+							||(intList[4]<0)
+							||(intList[4]>127))
+						throw(
+						new ParameterException(
+							zeile,
+							"format must be \"sends:(0..15):(0..8):(0..127):(0..127)\""));
+						
+						sendsCrossRef = intList[1];
+					    sendsCrossAmt = intList[2];
+						sendsCrossTri = intList[3];
+						toggleFullMixer = intList[4];	
+					}
+					if (stringList[0]=="mixer")  
+					{
+						if (stringList.Length<3)
+							throw(new ParameterException(zeile));
+					
+						if (  (intList[1]<1)
+							||(intList[1]>16)
+						    ||(intList[2]>56))
+						throw(
+						new ParameterException(
+							zeile,
+							"format must be \"mixer:(1..16):(0..55)\""));
+
+						mixersCount++;
+						bcr.addMixer(
+							intList[1]-1+176,
+							intList[2]);
+					}
+					if (stringList[0]=="page")   
+					{
+						if (stringList.Length<6)
+							throw(new ParameterException(zeile));
+					
+						if ((intList[1]<0)
+							||(intList[1]>4)
+							||(intList[2]<0)
+							||(intList[2]>126)
+							||(intList[3]<1)
+							||(intList[3]>128)
+							||(intList[4]<1)
+							||(intList[4]>16)
+							||(intList[5]<0)
+							||(intList[5]>127))
+						throw(
+						new ParameterException(
+							zeile,
+							"format must be \"page:(0..4):(0..126):(1..128):(1..16):(1..127)\""));
+
+						pagesCount++;
+						bcr.addPage(
+							intList[1],		intList[2],
+							intList[3],		intList[4]-1+176,
+							intList[5]);
+					}
+				}
+				reader.Close();
+				bcr.setData(
+						inputDeviceID,
+						outputDeviceID,
+						ID,
+						toggleChangeMixer,
+						mixSectionCh,
+						insSectionCh,
+						sendsCrossRef,
+						sendsCrossAmt,
+						sendsCrossTri,
+						toggleFullMixer);
+			}
+			catch (FileNotFoundException f)
+			{
+				Console.WriteLine("    error: the specified file could not be found");
+			}
+			catch (FormatException f)
+			{
+				Console.Write("   error: wrong parameter format in line: ");
+			}
+			catch (ParameterException p)
+			{
+				Console.WriteLine("    error: wrong parameter count");
+			}
+			catch (Exception exc)
+			{
+				Console.WriteLine("    error: sorry, an unknown exception has ocurred");
+			}
+			finally
+			{
+				Console.WriteLine("    statistics");
+				if (deviceCount<1)
+					Console.WriteLine("error: no device Tag could be found");	
+				if (mixerToggleCount==0)
+					Console.WriteLine("error: no mixerToggle-tag could be found");
+				if (organisationCount==0)
+					Console.WriteLine("error: no organisationTag could be found");
+				
+
+				Console.Write("        deviceID: ");
+				Console.WriteLine(ID);
+				Console.Write("        inputChannel: ");
+				Console.WriteLine(inputDeviceID+1);
+				Console.Write("        outputChannel: ");
+				Console.WriteLine(outputDeviceID);
+				Console.Write("        send tags found: ");
+				Console.WriteLine(sendsCount);
+				Console.Write("            crossReference to controller: ");
+				Console.WriteLine(sendsCrossRef);
+				Console.Write("        pages found: ");
+				Console.WriteLine(pagesCount);
+				Console.Write("        mixers found: ");
+				Console.WriteLine(mixersCount);
+				Console.WriteLine(" ");
+			}
+		}
+		
+		
+	}
+		
+	
+
+}
+

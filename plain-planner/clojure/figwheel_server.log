@@ -1,0 +1,221 @@
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 1.163 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/that/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.78 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/that/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.525 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.972 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.605 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.66 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.799 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 1.136 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+nil
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.812 seconds.[0m
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.635 seconds.[0m
+"..." "some" "..." "type"
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.655 seconds.[0m
+"..." "some" "..." "type"
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.493 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var disco.core/defone[0m
+
+  [36m 8[0m  [36m;; define your app data so that it doesn't get over-written on reload[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(defonce app-state (atom {:text "Hello world!"}))[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(defone backend-start (atom nil))[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var disco.core/defone[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn hello-world [][0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m  (fn [][0m
+  [36m17[0m  [36m  [:div[0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:12  column:9  ----[0m
+
+  [1mUse of undeclared Var disco.core/backend-start[0m
+
+  [36m 8[0m  [36m;; define your app data so that it doesn't get over-written on reload[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(defonce app-state (atom {:text "Hello world!"}))[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(defone backend-start (atom nil))[0m
+  [0m  [0m  [33m        ^--- Use of undeclared Var disco.core/backend-start[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn hello-world [][0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m  (fn [][0m
+  [36m17[0m  [36m  [:div[0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.552 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:16  column:4  ----[0m
+
+  [1mUse of undeclared Var disco.core/GET[0m
+
+  [36m12[0m  [36m(defonce backend-start (atom nil))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn hello-world [][0m
+  [36m15[0m  [36m[0m
+  [33m16[0m  [1m  (GET "/documents" :handler (fn [response][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var disco.core/GET[0m
+  [36m17[0m  [36m                         (log js/console "hello")[0m
+  [36m18[0m  [36m                         (reset! matches (:body response))))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m  (fn [][0m
+  [36m21[0m  [36m  [:div[0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:17  column:27  ----[0m
+
+  [1mUse of undeclared Var disco.core/log[0m
+
+  [36m14[0m  [36m(defn hello-world [][0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m  (GET "/documents" :handler (fn [response][0m
+  [33m17[0m  [1m                         (log js/console "hello")[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var disco.core/log[0m
+  [36m18[0m  [36m                         (reset! matches (:body response))))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m  (fn [][0m
+  [36m21[0m  [36m  [:div[0m
+  [36m22[0m  [36m   [:h1 (:text @app-state)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:18  column:34  ----[0m
+
+  [1mUse of undeclared Var disco.core/matches[0m
+
+  [36m14[0m  [36m(defn hello-world [][0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m  (GET "/documents" :handler (fn [response][0m
+  [36m17[0m  [36m                         (log js/console "hello")[0m
+  [33m18[0m  [1m                         (reset! matches (:body response))))[0m
+  [0m  [0m  [33m                                 ^--- Use of undeclared Var disco.core/matches[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m  (fn [][0m
+  [36m21[0m  [36m  [:div[0m
+  [36m22[0m  [36m   [:h1 (:text @app-state)][0m
+  [36m23[0m  [36m   [:h3 "Edit this and watch it change!!!"]]))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.771 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+nil
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:19  column:34  ----[0m
+
+  [1mUse of undeclared Var disco.core/backend-status[0m
+
+  [36m15[0m  [36m(defn hello-world [][0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m  (GET "/documents" :handler (fn [response][0m
+  [36m18[0m  [36m                         (.log js/console "hello")[0m
+  [33m19[0m  [1m                         (reset! backend-status (:body response))))[0m
+  [0m  [0m  [33m                                 ^--- Use of undeclared Var disco.core/backend-status[0m
+  [36m20[0m  [36m[0m
+  [36m21[0m  [36m  (fn [][0m
+  [36m22[0m  [36m  [:div[0m
+  [36m23[0m  [36m   [:h1 (:text @app-state)][0m
+  [36m24[0m  [36m   [:h3 "Edit this and watch it change!!!"]]))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 3.461 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 3.223 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.603 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.731 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.684 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.737 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.745 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.615 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[36m----  Compiler Warning on   src/cljs/disco/core.cljs   line:19  column:48  ----[0m
+
+  [1mUse of undeclared Var disco.core/get-matches[0m
+
+  [36m15[0m  [36m(defn hello-world [][0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m  (GET "/documents" { :keywords? true[0m
+  [36m18[0m  [36m                      :handler (fn [response][0m
+  [33m19[0m  [1m                         (.log js/console ";" (get-matches response :status))[0m
+  [0m  [0m  [33m                                               ^--- Use of undeclared Var disco.core/get-matches[0m
+  [36m20[0m  [36m                         (reset! backend-status (:body response)))})[0m
+  [36m21[0m  [36m[0m
+  [36m22[0m  [36m  (fn [][0m
+  [36m23[0m  [36m  [:div[0m
+  [36m24[0m  [36m   [:h1 (:text @app-state)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/disco/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.597 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.66 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 1.041 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil
+Compiling build :dev to "resources/public/js/compiled/that.js" from ["src/cljs" "src/clj"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/that.js" in 0.758 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/disco/core.js
+nil

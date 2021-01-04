@@ -1,0 +1,73 @@
+device:8:94
+record:121
+notes:16:11:52
+
+
+# pattern kommandos
+
+command:11:12:12:48:0
+command:11:13:12:49:0
+command:11:14:12:50:0
+command:11:15:12:51:0
+command:11:16:12:52:0
+command:11:17:12:53:0
+command:11:18:12:54:0
+command:11:19:12:55:0
+command:11:20:12:56:0
+command:11:21:12:57:0
+command:11:22:12:58:0
+command:11:23:12:59:0
+shiftCommand:11:24:12:48:0
+shiftCommand:11:25:12:49:0
+shiftCommand:11:26:12:50:0
+shiftCommand:11:27:12:51:0
+shiftCommand:11:28:12:52:0
+shiftCommand:11:29:12:53:0
+shiftCommand:11:30:12:54:0
+shiftCommand:11:31:12:55:0
+shiftCommand:11:32:12:56:0
+shiftCommand:11:33:12:57:0
+shiftCommand:11:34:12:58:0
+shiftCommand:11:35:12:59:0
+
+# scope kommando
+
+command:12:7:12:70:0
+
+# play kommando
+
+command:12:53:12:71:0
+
+# browser kommandos
+command:13:83:12:62:0
+command:13:84:12:63:0
+command:13:68:12:61:0
+command:13:69:12:60:0
+
+# record kommandos
+command:12:57:12:64:0
+command:12:49:12:65:0
+command:12:51:12:66:0
+
+# views kommandos
+
+command:12:12:10:36:0
+command:12:14:10:38:0
+command:12:15:10:46:0
+
+# machines kommandos
+
+shiftCommand:12:76:10:36:0
+shiftCommand:12:77:10:38:0
+shiftCommand:12:78:10:46:0
+
+# cc kommandos
+
+command:12:33:12:71:1
+command:12:35:12:74:1
+command:12:36:12:84:1
+
+command:12:40:12:91:1
+command:12:41:12:93:1
+command:12:42:12:5:1
+

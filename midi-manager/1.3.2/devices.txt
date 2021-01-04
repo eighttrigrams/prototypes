@@ -1,0 +1,27 @@
+﻿bcrLinks:16
+bcrRechts:1
+bcrLive:10
+efx1:14
+efx2:15
+efx3:7
+efx4:-1
+synthOS:3
+guruOS:5
+
+
+
+
+
+
+bcr*     : hier werden die über midi-ox / midi-yoke verteilten kanalnummern
+           eingetragen, damit der midi manager die geräte über die ent-
+	   sprechenden ports kommunizieren kann.
+
+efx1-efx4: die hier eingetragenen werte werden beim druck einer der 4 dafür 
+	   vorgesehenen efx-knöpfe (die die entsprechenden behringer efx-pages
+	   direkt aufrufen), direkt als solche an ableton live gesendet, wo 
+	   sie als direkten midi input ankommen, und zwar auf kanal xxx TODO
+	   es kann somit auch immer ein bestimmter channel-strip beim druck
+           einer taste aufgerufen werden, bei einem wert von -1 bleibt das
+	   unberüclsichtigt
+

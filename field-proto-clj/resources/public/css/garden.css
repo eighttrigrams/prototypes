@@ -1,0 +1,106 @@
+body {
+  background: #ddd;
+}
+
+div#map {
+  height: 100%;
+}
+
+div#map div.leaflet-top {
+  margin-left: 7px;
+}
+
+div#navbar {
+  background-color: #5572A1;
+  height: 26px;
+}
+
+div#navbar a#brand {
+  color: white;
+  padding-left: 4px;
+}
+
+div#navbar a#info {
+  color: white;
+  padding-right: 4px;
+}
+
+div.sidebar {
+  height: 460px;
+  background-color: #F5F5F5;
+}
+
+div.sidebar span.search i {
+  padding-right: 20px;
+  background-color: white;
+  color: #A9A9A9;
+  font-size: 20px;
+}
+
+div.sidebar input {
+  padding-top: 3px;
+  border: 0px;
+  padding-left: 6px;
+  color: #A9A9A9;
+  font-size: 18px;
+}
+
+div.sidebar input::placeholder {
+  color: lightgray;
+}
+
+div.sidebar input:focus {
+  outline: none;
+}
+
+div.sidebar h3 {
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
+div.sidebar div.document:hover {
+  background-color: #F5F5F5;
+}
+
+div.sidebar a:hover {
+  text-decoration: none;
+}
+
+div.project-sidebar h3 a {
+  padding-right: 18px;
+  color: #A9A9A9;
+}
+
+div.project-sidebar div.project-sidebar-body {
+  background-color: white;
+  height: 400px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-right: 38px;
+}
+
+div.overview-sidebar div.document {
+  background-color: white;
+  padding-left: 10px;
+  padding-top: 2px;
+  height: 60px;
+  margin: 1px;
+  color: black;
+}
+
+div.overview-sidebar div.document div.short-description {
+  color: gray;
+}
+
+h1 {
+  color: #f00;
+}
+
+p {
+  font: 18px "Century Gothic", Futura, sans-serif;
+}
+
+.my-class {
+  font-size: 20px;
+  background: #ddf;
+}

@@ -1,0 +1,144 @@
+.person-timetable {
+  font-size: 13px; }
+
+.timeline-container {
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+.the-timeline {
+  width: 100000px;
+  max-width: 100000px;
+  white-space: nowrap; }
+  .the-timeline .task-elem {
+    height: 50px;
+    padding: 3px;
+    font-size: 9px;
+    position: relative; }
+    .the-timeline .task-elem.even {
+      background-color: lightblue; }
+    .the-timeline .task-elem.odd {
+      background-color: lightcoral; }
+  .the-timeline .timeline-heading .timeline-heading-item {
+    display: inline-block;
+    width: 40px;
+    position: relative;
+    height: 60px; }
+    .the-timeline .timeline-heading .timeline-heading-item .letter {
+      position: relative;
+      top: 22px;
+      font-size: 9px;
+      padding-left: 2px; }
+    .the-timeline .timeline-heading .timeline-heading-item .digit {
+      position: relative;
+      top: 10px;
+      left: 12px; }
+    .the-timeline .timeline-heading .timeline-heading-item .month {
+      position: absolute;
+      top: 0;
+      z-index: 1000;
+      height: 22px;
+      width: 40px; }
+    .the-timeline .timeline-heading .timeline-heading-item .month-indicator {
+      position: absolute;
+      height: 10px;
+      color: white;
+      padding: 3px;
+      z-index: 1001;
+      font-size: 12px; }
+
+.card-list {
+  text-align: center; }
+
+.card {
+  margin-bottom: 20px; }
+  .card .activatable:hover {
+    background-color: whitesmoke; }
+  .card .editing {
+    background-color: whitesmoke; }
+  .card.selected {
+    border-right-color: darkslategray;
+    border-right-width: 2px; }
+  .card input {
+    background-color: whitesmoke;
+    border: 0; }
+    .card input:focus {
+      outline: none; }
+  .card .card-header {
+    height: 24px;
+    padding: 0;
+    background-color: white; }
+    .card .card-header h5 {
+      font-size: 14px; }
+    .card .card-header .material-icons {
+      font-size: 14px; }
+    .card .card-header .inner-container {
+      padding: 4px; }
+    .card .card-header .rank-higher-button {
+      position: absolute;
+      width: 22px;
+      left: 0;
+      height: 23px; }
+    .card .card-header .title-button {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      height: 23px;
+      width: calc(100% - 44px); }
+      .card .card-header .title-button .title {
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .card .card-header .title-button input {
+        padding: 0;
+        width: 100%; }
+    .card .card-header .edit-and-done-button {
+      position: absolute;
+      right: 0;
+      width: 22px;
+      height: 23px; }
+  .card .card-body {
+    padding: 4px;
+    font-size: 12px;
+    text-align: left; }
+    .card .card-body .label {
+      font-size: 10px;
+      font-style: italic;
+      font-weight: bold; }
+    .card .card-body textarea {
+      height: 100px;
+      width: 100%;
+      background-color: whitesmoke;
+      border: 0;
+      padding: 0; }
+      .card .card-body textarea:focus {
+        outline: none;
+        border: 0;
+        padding: 0; }
+
+body {
+  background-color: whitesmoke;
+  overflow-y: visible;
+  overflow-x: hidden; }
+
+#nav-bar {
+  padding: 4px;
+  background-color: whitesmoke;
+  height: 55px; }
+
+.section-heading {
+  padding: 4px;
+  background-color: darkslategray;
+  color: whitesmoke;
+  height: 35px;
+  text-align: center;
+  margin-bottom: 37px; }
+
+a:link {
+  color: darkslategray; }
+
+a:visited {
+  color: darkslategray; }
+
+a:hover {
+  color: green; }

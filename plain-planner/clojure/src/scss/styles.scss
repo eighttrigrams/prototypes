@@ -1,0 +1,47 @@
+$card-header-color: rgba(46, 79, 68, 0.07);
+$button-width: 22px;
+$button-height: 23px;
+$highlight-color: whitesmoke;
+$theme-color: darkslategray;
+
+@import 'person_timetable';
+@import 'timeline';
+@import 'goals';
+@import 'cards';
+
+
+body {
+  background-color: whitesmoke;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+
+#nav-bar {
+  padding: 4px;
+  background-color: whitesmoke;
+  height: 55px;
+}
+
+
+.section-heading {
+  padding: 4px;
+  background-color: $theme-color;
+  color: whitesmoke;
+  height: 35px;
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+
+a:link {
+  color: $theme-color;
+}
+
+a:visited {
+  color: $theme-color;
+}
+
+a:hover {
+  color: green;
+}

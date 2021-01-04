@@ -1,0 +1,13 @@
+target/
+resources/public/js/
+resources/main.js
+*-init.clj
+figwheel_server.log
+*.iml
+.idea
+node_modules
+out
+.lein-failures
+.lein-repl-history
+.rebel_readline_history
+logs

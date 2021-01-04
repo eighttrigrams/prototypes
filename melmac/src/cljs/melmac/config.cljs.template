@@ -1,0 +1,3 @@
+(ns melmac.config)
+
+(defonce store-path "./storage/")

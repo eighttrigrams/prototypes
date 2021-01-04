@@ -1,0 +1,112 @@
+.card-list {
+  text-align: center;
+}
+
+
+.card {
+  margin-bottom: 20px;
+
+  .activatable {
+    &:hover {
+      background-color: $highlight-color;
+    }
+  }
+
+  .editing {
+    background-color: $highlight-color;
+  }
+
+  &.selected {
+    border-right-color: $theme-color;
+    border-right-width: 2px;
+  }
+
+  input {
+    background-color: whitesmoke;
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .card-header {
+    height: 24px;
+    padding: 0;
+    background-color: white;
+
+    h5 {
+      font-size: 14px;
+    }
+
+    .material-icons {
+      font-size: 14px;
+    }
+
+    .inner-container {
+      padding: 4px;
+    }
+
+    .rank-higher-button {
+      position: absolute;
+      width: $button-width;
+      left: 0;
+      height: $button-height;
+    }
+
+    .title-button {
+      position: absolute;
+      left: $button-width;
+      right: $button-width;
+      height: $button-height;
+      width: calc(100% - 44px);
+
+      .title {
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      input {
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    .edit-and-done-button {
+
+      position: absolute;
+      right: 0;
+      width: $button-width;
+      height: $button-height;
+    }
+  }
+
+  .card-body {
+    padding: 4px;
+    font-size: 12px;
+
+    text-align: left;
+
+    .label {
+      font-size: 10px;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    textarea {
+      height: 100px;
+      width: 100%;
+      background-color: $highlight-color;
+      border: 0;
+      padding: 0;
+
+      &:focus {
+        outline: none;
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
+}

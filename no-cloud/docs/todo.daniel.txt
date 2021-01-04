@@ -1,0 +1,26 @@
+TODO list
+
+lock files in metadatafilemanager on class level
+do the same for metadatarecordmanager
+in nocloudroot: it needs attr accessors for port with connectors. this should not be the case.
+
+throw an error when trying to store a file where the logical file name already exists
+
+let worker be part of nocloudroot start it with nocloudroot start
+let worker.rb be named fakeapplication then because it resembles an application using the framework
+
+dokument the purpose of worker rb
+autorepair
+
+CURRENTLY WORKING ON:
+
+make checksumming a worker like the other two workers
+halt distributionworker at the after in common_steps
+rewrite rubydoc of startChecksumWorker
+
+
+QUESTIONS:
+* how to ensure an endpoint identifier is unique?
+* how to ensure the date and time on the different machines is the same
+
+

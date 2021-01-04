@@ -1,0 +1,11 @@
+device:5:9
+controller:dev0.txt
+controller:dev1.txt
+rows:1
+shift:1:84
+instrument:1:instr0.txt
+instrument:1:instr1.txt
+instrument:1:instr4.txt
+instrument:1:instr5.txt
+instrument:1:instr2.txt
+instrument:1:instr3.txt

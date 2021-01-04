@@ -1,0 +1,112 @@
+<daten>
+<zeile>
+  <index>    0   </index>
+  <plz>      50455   </plz>
+  <strasse>  ahornstrasse   </strasse>
+  <hnmodus>  -   </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>     2   </welle>
+  <modul>    4  </modul>
+</zeile>
+<zeile>
+  <index>    1   </index>
+  <plz>      50777  </plz>
+  <strasse>  aachener strasse    </strasse>
+  <hnmodus>  -   </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      1  </welle>
+  <modul>     5  </modul>
+</zeile>
+<zeile>
+  <index>    2   </index>
+  <plz>      50773 </plz>
+  <strasse>  aachener strasse     </strasse>
+  <hnmodus>  -   </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      2  </welle>
+  <modul>      1 </modul>
+</zeile>
+<zeile>
+  <index>     3  </index>
+  <plz>       50777  </plz>
+  <strasse>   bahnhofstr  </strasse>
+  <hnmodus>    - </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      2  </welle>
+  <modul>     3  </modul>
+</zeile>
+<zeile>
+  <index>      4 </index>
+  <plz>        50767 </plz>
+  <strasse>    templegasse </strasse>
+  <hnmodus>    - </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      1543  </welle>
+  <modul>     3  </modul>
+</zeile>
+<zeile>
+  <index>      5 </index>
+  <plz>        50888 </plz>
+  <strasse>    georggasse </strasse>
+  <hnmodus>    g </hnModus>
+  <hnvon>      100 </hnvon>
+  <hnbis>     104  </hnbis>
+  <welle>      1  </welle>
+  <modul>     3  </modul>
+</zeile>
+<zeile>
+  <index>      6 </index>
+  <plz>        50888 </plz>
+  <strasse>    georggasse </strasse>
+  <hnmodus>    x </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      7  </welle>
+  <modul>     7  </modul>
+</zeile>
+<zeile>
+  <index>      7 </index>
+  <plz>        50221 </plz>
+  <strasse>    krankenkasse </strasse>
+  <hnmodus>    x </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      1  </welle>
+  <modul>     1  </modul>
+</zeile>
+<zeile>
+  <index>      8 </index>
+  <plz>        50222 </plz>
+  <strasse>    krankenkasse </strasse>
+  <hnmodus>    u </hnModus>
+  <hnvon>      101 </hnvon>
+  <hnbis>      113 </hnbis>
+  <welle>      2  </welle>
+  <modul>     2  </modul>
+</zeile>
+<zeile>
+  <index>      9 </index>
+  <plz>        50222 </plz>
+  <strasse>    krankenkasse </strasse>
+  <hnmodus>    x </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      3  </welle>
+  <modul>     3  </modul>
+</zeile>
+<zeile>
+  <index>      10 </index>
+  <plz>        50211 </plz>
+  <strasse>    krawelhaus </strasse>
+  <hnmodus>    x </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle>      3  </welle>
+  <modul>     3  </modul>
+</zeile>
+</daten>  

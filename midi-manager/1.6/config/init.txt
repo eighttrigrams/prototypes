@@ -1,0 +1,66 @@
+device:5:10:11
+controller:dev0.txt
+rows:1
+shift:12:72
+
+
+
+
+
+
+
+instrument:1:pred1.txt
+instrument:1:pred2.txt
+instrument:1:pred3.txt
+instrument:1:pred4.txt
+instrument:1:guru1.txt
+instrument:1:guru2.txt
+
+# hui befehle ..................
+
+map:153:50:144:74
+map:153:45:144:78
+map:153:51:144:75
+map:153:42:191:100
+map:153:49:144:81
+
+# record
+map:187:25:144:95
+# stop
+map:187:23:144:93
+# start
+map:187:24:144:94
+# fwd
+map:187:22:144:85
+# rew
+map:187:21:144:84
+# loop
+map:187:20:144:86
+
+# hui ende ---------------------
+
+# predator 1-4
+
+map:159:96:191:90
+map:159:97:191:91
+map:159:98:191:92
+map:159:99:191:93
+
+# efx 1-4
+
+map:159:84:191:104
+map:159:85:191:105
+map:159:86:191:106
+map:159:87:191:107
+
+# sendefx 1-4
+
+map:159:72:191:112
+map:159:73:191:113
+map:159:74:191:114
+map:159:75:191:115
+
+# guru 1- 2
+
+map:159:60:191:94
+map:159:63:191:95

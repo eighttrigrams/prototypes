@@ -1,0 +1,52 @@
+<daten>
+<zeile>
+  <index>    0   </index>
+  <plz>      50455   </plz>
+  <strasse>  ahornstrasse   </strasse>
+  <hnmodus>  -   </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle     2   </welle>
+  <modul>    4  </modul>
+</zeile>
+<zeile>
+  <index>    1   </index>
+  <plz>      50777  </plz>
+  <strasse>  aachener strasse    </strasse>
+  <hnmodus>  -   </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle      1  </welle>
+  <modul>     5  </modul>
+</zeile>
+<zeile>
+  <index>    2   </index>
+  <plz>      50773 </plz>
+  <strasse>  aachener strasse     </strasse>
+  <hnmodus>  -   </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle      2  </welle>
+  <modul>      1 </modul>
+</zeile>
+<zeile>
+  <index>     3  </index>
+  <plz>       50777  </plz>
+  <strasse>   bahnhofstr  </strasse>
+  <hnmodus>    - </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle      2  </welle>
+  <modul>     3  </modul>
+</zeile>
+<zeile>
+  <index>      4 </index>
+  <plz>        50767 </plz>
+  <strasse>    templegasse </strasse>
+  <hnmodus>    - </hnModus>
+  <hnvon>       </hnvon>
+  <hnbis>       </hnbis>
+  <welle      1  </welle>
+  <modul>     3  </modul>
+</zeile>
+</daten>  

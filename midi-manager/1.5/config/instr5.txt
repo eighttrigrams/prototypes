@@ -1,0 +1,6 @@
+device:5:99
+record:125
+notes:1:1:32000
+
+command:1:1:1:1:1
+command:1:0:1:0:2

@@ -1,0 +1,208 @@
+using System;
+using System.Collections;
+using System.IO;
+using System.Text;
+using System.ComponentModel;
+
+namespace midiManager
+{
+
+
+class Program
+{static void Main(string[] args)
+{
+	Midi myMidi = new Midi();
+	myMidi.start();
+}}
+
+
+class  Midi
+{
+
+
+
+private     MIDIOXLib.MoxScriptClass mox = new MIDIOXLib.MoxScriptClass();
+private     Controller controller;
+private     InstrController instrController;
+private     Device host;
+
+
+public int   midiBankwechsel      = 192;  
+
+int hostInputID = 0;
+int hostOutputID = 0;
+
+
+public void start()
+{
+	mox.MidiInput += new MIDIOXLib._IMoxScriptEvents_MidiInputEventHandler(this.midiIn);
+	host = new Device(mox,0);
+	controller = new Controller(mox,host);
+	readConfigFile(".\\config\\init.txt");
+	host.deviceID=hostOutputID;
+
+	//main----------------
+	mox.FireMidiInput=1;
+	mox.DivertMidiInput=1;
+	Console.ReadLine();
+	mox.FireMidiInput=0;
+	//main----------------
+}
+
+
+private void midiIn(int ts, int port, int chan, int dat, int wert)
+{
+	instrController.delegat(chan,dat,wert);
+	if (chan>175)
+	   	controller.delegat(port,chan,dat,wert);
+
+	if ((chan==191)&&(dat>63)&&(dat<96)&&(port!=hostInputID))//TODO dokumentieren
+		host.toggleOff(chan,dat);
+}
+
+
+private void readConfigFile(string dateiName)
+{
+	int devicesCount = 0;
+	int controllerCount = 0;
+	int instrumentCount = 0;
+	int rowsCount = 0;
+	StreamReader reader = null;
+	try 
+	{
+		Console.Write("reading file: ");
+		Console.WriteLine(dateiName);
+		Console.WriteLine("..");
+
+		reader = File.OpenText(dateiName);
+		int zeile = 0;
+		string line;
+		line = reader.ReadLine();
+		while (line!=null)
+		{
+  			string[] stringList = line.Split(':');
+			zeile++;
+			line = reader.ReadLine();
+			if (stringList.Length<2) continue;
+			if (stringList[0]=="#")  continue;
+
+			if (stringList[0]=="rows")
+			{
+				instrController = new InstrController(mox,host,Convert.ToInt16(stringList[1]));
+				rowsCount++;
+			}
+
+			if (stringList[0]=="shift")
+			{
+				if (stringList[0].Length<3)
+				throw(
+				new ParameterException(zeile));
+
+				int shiftButtonChannel = Convert.ToInt16( stringList[1] ) + 145;
+				int shiftButtonNote    = Convert.ToInt16( stringList[2] );
+
+				if ((shiftButtonChannel-145<1)
+					||(shiftButtonChannel-145>16)
+					||(shiftButtonNote<0)
+					||(shiftButtonNote>127))
+				throw(
+				new ParameterException(
+					zeile,
+					"format must be \"shift:(1..16):(1..16)\""));
+
+				instrController.setShift(shiftButtonChannel,shiftButtonNote);
+			}
+
+			if (stringList[0]=="device")
+			{
+				if (stringList.Length<3)
+				throw(
+				new ParameterException(zeile));
+			
+				int i = Convert.ToInt16( stringList[1] );
+				int o = Convert.ToInt16( stringList[2] ) ;
+
+				if ((i<1)
+					||(i>16)
+					||(o<1)
+					||(o>16))
+				throw(
+				new ParameterException(
+					zeile,
+					"format must be \"device:(1..16):(1..16)\""));
+				
+				hostInputID=i - 1 ;
+				hostOutputID=o  ;
+				devicesCount++;
+			}
+			if (stringList[0]=="controller")
+			{
+				string fully = ".\\config\\";
+				fully += stringList[1];
+				controller.addController(fully);
+				controllerCount++;
+			}
+			if (stringList[0]=="instrument")
+			{
+				if (rowsCount==0)
+				throw(
+				new ParameterException(
+					zeile,
+					"place a rows-tag before any instrument tag"));
+
+				
+				
+				if (stringList.Length<3)
+				throw(
+				new ParameterException(zeile));
+				
+				int i = Convert.ToInt16( stringList[1] );
+
+				if ((i<1)
+					||(i>2))
+				throw(
+				new ParameterException(
+					zeile,
+					"format must be \"instrument:(1..2):fileName\""));
+
+				string fully = ".\\config\\";
+				fully += stringList[2]; 
+				instrumentCount++;
+				instrController.addInstrument(
+						i-1,
+						fully);
+			}
+		}
+		reader.Close();
+	}
+	catch(FileNotFoundException f)
+	{
+		Console.WriteLine("file not found");
+	}
+	catch(FormatException f)
+	{
+	}
+	catch(ParameterException p)
+	{
+	}
+	catch(Exception e)
+	{
+	}
+	finally
+	{
+		Console.WriteLine("..");
+		Console.WriteLine("    parsing finished ---->");
+		if (devicesCount==0)
+			Console.WriteLine("    no device could be found");
+		Console.Write("    instruments found: ");
+		Console.WriteLine(instrumentCount);
+		Console.Write("    controllers found: ");
+		Console.WriteLine(controllerCount);
+		
+	}
+}
+
+
+
+}
+}

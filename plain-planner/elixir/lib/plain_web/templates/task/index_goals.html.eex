@@ -1,0 +1,5 @@
+<%= for goal <- @goals do %>
+  <div class="card" style="background-color: lightgray">
+    <%= goal.name %> <%= link("go", to: Routes.task_path(@conn, :index, goal: goal.id), method: :get, class: "btn btn-sm btn-secondary") %>
+  </div>
+<% end %>

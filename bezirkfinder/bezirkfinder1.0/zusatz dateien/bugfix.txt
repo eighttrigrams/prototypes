@@ -1,0 +1,11 @@
+achtung 
+wenn es eintrage gibt mit u,g und e
+aber keine mit x
+schmeisst er kein ergebnis raus
+
+
+wenn es unterscheidungen aber nur ein einzelnes x gibt soltte
+das programm das erkene da keine weitere unterscheidung mehr notwendig ist
+
+ich ersetzte jetzt jeden kleinscheis durch ne funktion zur besseren lesbar keit
+sollte das prog zu langsam werden kann man das ja wider rekonstruieren

@@ -1,0 +1,12 @@
+colorscheme desert
+:set shiftwidth=4
+:set cindent
+:e program.cs
+:tabnew midiCentral.cs
+:tabnew midiProtocolDevice.cs
+:tabnew page.cs
+:tabnew config.cs
+:tabnew device.cs
+:tabnew instrCentral.cs
+:tabnew instrumentProtocolDevice.cs
+:tabnew huiCentral.cs
