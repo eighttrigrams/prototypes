@@ -5,12 +5,12 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [cljsjs/reactstrap "6.0.1-0"]
+                 [cljsjs/reactstrap "7.1.0-0"]
                  [ring-server "0.5.0"]
                  [reagent "1.0.0"]
-                 [reagent-utils "0.3.1"]
+                 [reagent-utils "0.3.3"]
                  [clj-http "3.9.1"]
-                 [cljs-ajax "0.7.5"]
+                 [cljs-ajax "0.8.1"]
                  [garden "1.3.6"]
                  [ring/ring-defaults "0.3.2"]
                  [ring/ring-json "0.4.0"]
