@@ -26,7 +26,7 @@
 
 (defn documents-handler
  [_request]
- (prn (str "hello1"))
+ (prn (str "hello from the backend's documents-handler"))
  ; (client/get "http://localhost:3001"))
  (response documents))
 

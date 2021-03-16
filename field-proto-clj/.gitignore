@@ -14,3 +14,5 @@ pom.xml.asc
 /.env
 /.sass-cache
 .idea
+.rebel_readline_history
+.lsp

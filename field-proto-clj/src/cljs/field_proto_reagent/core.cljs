@@ -1,5 +1,6 @@
 (ns field-proto-reagent.core
     (:require [reagent.core :as reagent :refer [atom]]
+              [reagent.dom :as dom]
               [reagent.session :as session]
               [reitit.frontend :as reitit]
               [clerk.core :as clerk]
@@ -39,7 +40,7 @@
 
 
 (defn mount-root []
-  (reagent/render [top-page] (.getElementById js/document "app")))
+  (dom/render [top-page] (.getElementById js/document "app")))
 
 
 (defn init! []

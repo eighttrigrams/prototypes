@@ -22,7 +22,7 @@ is handled by figwheel. Css with garden.
 In one terminal window, run
 
 ```
-lein fighwheel
+lein figwheel
 ```
 
 Fighwheel watches for changes and recompiles automatically. Look at [http://localhost:3449](http://localhost:3449).
