@@ -11,9 +11,9 @@
                  [reagent-utils "0.3.3"]
                  [clj-http "3.12.1"]
                  [cljs-ajax "0.8.1"]
-                 [garden "1.3.6"]
+                 [garden "1.3.10"]
                  [ring/ring-defaults "0.3.2"]
-                 [ring/ring-json "0.4.0"]
+                 [ring/ring-json "0.5.0"]
                  [hiccup "2.0.0-alpha2"]
                  [yogthos/config "1.1.1"]
                  [org.clojure/clojurescript "1.10.758"
