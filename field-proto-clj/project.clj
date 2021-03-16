@@ -9,14 +9,14 @@
                  [ring-server "0.5.0"]
                  [reagent "1.0.0"]
                  [reagent-utils "0.3.1"]
-                 [clj-http "3.12.1"]
+                 [clj-http "3.9.1"]
                  [cljs-ajax "0.7.5"]
                  [garden "1.3.6"]
                  [ring/ring-defaults "0.3.2"]
                  [ring/ring-json "0.4.0"]
                  [hiccup "1.0.5"]
                  [yogthos/config "1.1.1"]
-                 [org.clojure/clojurescript "1.10.758"
+                 [org.clojure/clojurescript "1.10.439"
                   :scope "provided"]
                  [metosin/reitit "0.5.12"]
                  [pez/clerk "1.0.0"]
