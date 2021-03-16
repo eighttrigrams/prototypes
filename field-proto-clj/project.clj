@@ -14,7 +14,7 @@
                  [garden "1.3.6"]
                  [ring/ring-defaults "0.3.2"]
                  [ring/ring-json "0.4.0"]
-                 [hiccup "1.0.5"]
+                 [hiccup "2.0.0-alpha2"]
                  [yogthos/config "1.1.1"]
                  [org.clojure/clojurescript "1.10.758"
                   :scope "provided"]
