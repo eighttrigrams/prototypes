@@ -9,7 +9,7 @@
                  [ring-server "0.5.0"]
                  [reagent "1.0.0"]
                  [reagent-utils "0.3.1"]
-                 [clj-http "3.9.1"]
+                 [clj-http "3.12.1"]
                  [cljs-ajax "0.7.5"]
                  [garden "1.3.6"]
                  [ring/ring-defaults "0.3.2"]
