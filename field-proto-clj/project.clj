@@ -85,8 +85,8 @@
    :profiles {:dev {:repl-options {:init-ns field-proto-reagent.repl}
                     :dependencies [[cider/piggieback "0.3.10"]
                                    [binaryage/devtools "0.9.10"]
-                                   [ring/ring-mock "0.3.2"]
-                                   [ring/ring-devel "1.7.1"]
+                                   [ring/ring-mock "0.4.0"]
+                                   [ring/ring-devel "1.9.1"]
                                    [prone "1.6.1"]
                                    [figwheel-sidecar "0.5.20"]
                                    [nrepl "0.4.5"]
