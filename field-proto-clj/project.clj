@@ -18,7 +18,7 @@
                  [yogthos/config "1.1.1"]
                  [org.clojure/clojurescript "1.10.439"
                   :scope "provided"]
-                 [metosin/reitit "0.2.9"]
+                 [metosin/reitit "0.5.12"]
                  [pez/clerk "1.0.0"]
                  [venantius/accountant "0.2.4"
                   :exclusions [org.clojure/tools.reader]]]
