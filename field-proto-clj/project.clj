@@ -16,7 +16,7 @@
                  [ring/ring-json "0.4.0"]
                  [hiccup "1.0.5"]
                  [yogthos/config "1.1.1"]
-                 [org.clojure/clojurescript "1.10.439"
+                 [org.clojure/clojurescript "1.10.758"
                   :scope "provided"]
                  [metosin/reitit "0.5.12"]
                  [pez/clerk "1.0.0"]
@@ -88,11 +88,11 @@
                                    [ring/ring-mock "0.3.2"]
                                    [ring/ring-devel "1.7.1"]
                                    [prone "1.6.1"]
-                                   [figwheel-sidecar "0.5.18"]
+                                   [figwheel-sidecar "0.5.20"]
                                    [nrepl "0.4.5"]
                                    [pjstadig/humane-test-output "0.9.0"]]
                     :source-paths ["env/dev/clj"]
-                    :plugins [[lein-figwheel "0.5.18"]]
+                    :plugins [[lein-figwheel "0.5.20"]]
                     :injections [(require 'pjstadig.humane-test-output)
                                  (pjstadig.humane-test-output/activate!)]
 
