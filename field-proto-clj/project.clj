@@ -16,7 +16,7 @@
                  [ring/ring-json "0.4.0"]
                  [hiccup "1.0.5"]
                  [yogthos/config "1.1.1"]
-                 [org.clojure/clojurescript "1.10.439"
+                 [org.clojure/clojurescript "1.10.758"
                   :scope "provided"]
                  [metosin/reitit "0.5.12"]
                  [pez/clerk "1.0.0"]
