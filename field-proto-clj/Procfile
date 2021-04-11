@@ -1,1 +1,0 @@
-web: java $JVM_OPTS -cp target/field-proto-reagent.jar clojure.main -m field-proto-reagent.server
