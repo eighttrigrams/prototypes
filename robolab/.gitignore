@@ -1,8 +1,0 @@
-.idea
-env
-/*.obj
-*.pyc
-.DS_Store
-*.iml
-robolab/immutable
-robolab/tools
