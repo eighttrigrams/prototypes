@@ -3,3 +3,5 @@
 projectFilesBackup
 .lein-*
 .rebel_readline_history
+_build
+deps
