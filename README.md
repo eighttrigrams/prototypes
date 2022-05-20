@@ -1,3 +1,3 @@
 # Prototypes
   
-A collection of mostly older prototypes
+A collection of older prototypes
